@@ -28,7 +28,7 @@ class MusicService : Service() {
 
     override fun onDestroy() {
         super.onDestroy()
-        // آزادسازی منابع
+
         if (::mediaPlayer.isInitialized && mediaPlayer.isPlaying) {
             mediaPlayer.stop()
         }

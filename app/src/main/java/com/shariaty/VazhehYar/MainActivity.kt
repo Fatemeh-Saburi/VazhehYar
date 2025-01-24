@@ -38,15 +38,15 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // پخش موسیقی پس‌زمینه با صدای کم
+
         mediaPlayer = MediaPlayer.create(this, R.raw.background_music)
-        mediaPlayer.setVolume(0.1f, 0.1f) // تنظیم صدای کم
-        mediaPlayer.isLooping = true // پخش در حالت تکرار
+        mediaPlayer.setVolume(0.1f, 0.1f)
+        mediaPlayer.isLooping = true
         if (!isMusicMuted && !MusicService.isPlaying) {
             startService(Intent(this, MusicService::class.java))
         }
 
-        // تنظیمات آیکون
+
         val settingsLogo: ImageView = findViewById(R.id.settingsLogo)
         settingsLogo.setOnClickListener {
             if (popupWindow == null || !popupWindow!!.isShowing) {
@@ -56,16 +56,16 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // مدیریت دکمه Back
+
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                // غیرفعال کردن عملکرد پیش‌فرض دکمه Back
+
             }
         })
 
         val score = sharedPreferences.getInt("SCORE", 0)
 
-        // نمایش امتیازات در صفحه اصلی
+
         val scoreText: TextView = findViewById(R.id.score_text)
         scoreText.text = score.toString()
     }
@@ -104,15 +104,15 @@ class MainActivity : AppCompatActivity() {
             musicIcon.setImageResource(if (isMusicMuted) R.drawable.music_off else R.drawable.music_on)
             val intent = Intent(this@MainActivity, MusicService::class.java)
             if (isMusicMuted) {
-                stopService(intent) // توقف سرویس موسیقی
+                stopService(intent)
             } else {
-                startService(intent) // شروع سرویس موسیقی
+                startService(intent)
             }
             editor.putBoolean("MUSIC_MUTED", isMusicMuted)
             editor.apply()
         }
 
-        // تنظیمات مربوط به آیکون‌های دیگر را اضافه کنید
+
     }
 
     override fun onDestroy() {
@@ -120,7 +120,7 @@ class MainActivity : AppCompatActivity() {
         val sharedPreferences = getSharedPreferences("GamePrefs", MODE_PRIVATE)
         if (sharedPreferences.getBoolean("MUSIC_MUTED", false)) {
             val intent = Intent(this, MusicService::class.java)
-            stopService(intent) // توقف سرویس موسیقی
+            stopService(intent)
         }
     }
 }

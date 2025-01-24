@@ -214,7 +214,7 @@ class GameActivity : AppCompatActivity() {
         }
         val builtWordReversed = builtWord.toString().reversed()
         if (builtWordReversed == correctWord) {
-            if (!isSoundMuted) correctSoundPlayer.start() // پخش صدای درست
+            if (!isSoundMuted) correctSoundPlayer.start()
             val sharedPreferences = getSharedPreferences("GamePrefs", MODE_PRIVATE)
             val editor = sharedPreferences.edit()
 
@@ -225,13 +225,13 @@ class GameActivity : AppCompatActivity() {
             if (!levelWon) {
                 score += 5
                 editor.putBoolean(levelKey, true)
-                unlockNextLevel(currentPartName, currentLevel) // باز کردن قفل مرحله بعد
+                unlockNextLevel(currentPartName, currentLevel)
             }
             saveScore(editor)
             updateScoreText()
 
             if (areAllLevelsComplete(currentPartName)) {
-                // اگر همه مراحل تکمیل شده باشند، به PartActivity برو
+
                 val intent = Intent(this@GameActivity, PartActivity::class.java)
                 startActivity(intent)
                 finish()
@@ -239,7 +239,7 @@ class GameActivity : AppCompatActivity() {
                 showWinDialog()
             }
         } else {
-            if (!isSoundMuted) wrongSoundPlayer.start() // پخش صدای غلط
+            if (!isSoundMuted) wrongSoundPlayer.start()
             lives--
             updateLives()
             if (lives == 0) {
@@ -286,7 +286,7 @@ class GameActivity : AppCompatActivity() {
         val builder = AlertDialog.Builder(this)
         builder.setMessage("متاسفانه بازی را باختید!")
             .setPositiveButton("امتحان دوباره") { dialog, id ->
-                if (!isSoundMuted) loseSoundPlayer.start() // پخش صدای باختن
+                if (!isSoundMuted) loseSoundPlayer.start()
                 resetGameForRetry()
                 lives = 5
                 updateLives()
@@ -305,7 +305,7 @@ class GameActivity : AppCompatActivity() {
         val builder = AlertDialog.Builder(this)
         builder.setMessage("آفرین! کلمه درست است.")
             .setPositiveButton("مرحله بعدی") { dialog, id ->
-                if (!isSoundMuted) winSoundPlayer.start() // پخش صدای برنده شدن
+                if (!isSoundMuted) winSoundPlayer.start()
                 val currentLevel = intent.getIntExtra("LEVEL", 1)
                 val nextLevel = currentLevel + 1
                 val partName = intent.getStringExtra("PART_NAME") ?: ""
