@@ -1,0 +1,128 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/game_backgrounds">
+
+    <LinearLayout
+        android:id="@+id/heart_layout"
+        android:layout_width="314dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/score_text">
+
+        <ImageView
+            android:id="@+id/heart2"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/red_heart" />
+
+        <ImageView
+            android:id="@+id/heart4"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/red_heart" />
+
+        <ImageView
+            android:id="@+id/heart5"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/red_heart" />
+
+        <ImageView
+            android:id="@+id/heart3"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/red_heart" />
+
+        <ImageView
+            android:id="@+id/heart1"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/red_heart" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/underscore_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heart_layout" />
+
+    <TextView
+        android:id="@+id/score_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="80dp"
+        android:fontFamily="@font/gamazad"
+        android:text="0"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/score_logo"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/score"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/home_icon"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:id="@+id/letters_grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:alignmentMode="alignMargins"
+        android:columnCount="3"
+        android:padding="16dp"
+        android:rowCount="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/underscore_layout">
+        <!-- دکمه‌های حروف در کد اضافه خواهند شد -->
+    </GridLayout>
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="187dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/glass_button"
+        android:text="ثبت"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/letters_grid" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,124 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="16dp"
+    android:background="@drawable/main_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+    <Button
+        android:id="@+id/animals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gamazad"
+        android:textSize="70sp"
+        android:text="حیوانات"
+        android:background="@drawable/rounded_button"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/music"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gamazad"
+        android:textSize="70sp"
+        android:text="موسیقی"
+        android:background="@drawable/rounded_button"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/books"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gamazad"
+        android:textSize="70sp"
+        android:text="کتاب"
+        android:background="@drawable/rounded_button"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/movie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gamazad"
+        android:textSize="70sp"
+        android:text="فیلم و سریال"
+        android:background="@drawable/rounded_button"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/jobs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gamazad"
+        android:textSize="70sp"
+        android:text="شغل ها"
+        android:background="@drawable/rounded_button"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/flower"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gamazad"
+        android:textSize="70sp"
+        android:text="گل ها"
+        android:background="@drawable/rounded_button"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/sport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gamazad"
+        android:textSize="70sp"
+        android:text="ورزش"
+        android:background="@drawable/rounded_button"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/tecno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gamazad"
+        android:textSize="70sp"
+        android:text="تکنولوژی"
+        android:background="@drawable/rounded_button"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/animation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gamazad"
+        android:textSize="70sp"
+        android:text="انیمیشن"
+        android:background="@drawable/rounded_button"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/food"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gamazad"
+        android:textSize="70sp"
+        android:text="خوراکی"
+        android:background="@drawable/rounded_button"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"/>
+</LinearLayout>
+</ScrollView>
